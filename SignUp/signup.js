@@ -19,12 +19,12 @@ function validationForm(){
         lastname:4,
         phonenumber:5,
     }
-    usernameRex = new RegExp('^[a-z A-z _]+')
-    passwordRex = new RegExp('^[a-z A-z 0-9 $@!$%^&*!~]{8,}')
-    emailRex = new RegExp('[a-z A-z 0-9 _ \-]+[@][a-z]+[\.][a-z]{2,3}')
-    firstname = new RegExp('^[a-z A-z]{1,15}')
-    lastname = new RegExp('^[a-z A-z]{1,15}')
-    phonenumber = new RegExp('[9876][0-9]{9}')
+    const usernameRex = new RegExp('^[a-z A-z _]+')
+    const passwordRex = new RegExp('^[a-z A-z 0-9 $@!$%^&*!~]{8,}')
+    const emailRex = new RegExp('[a-z A-z 0-9 _ \-]+[@][a-z]+[\.][a-z]{2,3}')
+    const firstnameRex = new RegExp('^[a-z A-z]{1,15}')
+    const lastnameRex = new RegExp('^[a-z A-z]{1,15}')
+    const phonenumberRex = new RegExp('[9876][0-9]{9}')
     let check = true;
     if(!usernameRex.test(username)){
         seterror(inputObj.username,"username can not start with numbers or special character or can not be blank.")
@@ -38,15 +38,15 @@ function validationForm(){
         seterror(inputObj.email,"Email is not correct.")
         check = false
     }
-    else if(!firstname.test(email)){
+    else if(!firstnameRex.test(firstname)){
         seterror(inputObj.firstname,"First name must be alphabetic.")
         check = false
     }
-    else if(!lastname.test(email)){
+    else if(!lastnameRex.test(lastname)){
         seterror(inputObj.lastname,"Last name must be alphabetic.")
         check = false
     }
-    else if(!lastname.test(email)){
+    else if(!phonenumberRex.test(phonenumber)){
         seterror(inputObj.phonenumber,"Phonenumber is not correct.")
         check = false
     }
