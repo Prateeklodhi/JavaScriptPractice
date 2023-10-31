@@ -1,0 +1,87 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+section {
+    width: 80%; /* Adjust content width */
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.project img {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+}
+
+/* Updated styles for responsive navigation menu */
+.nav-toggle {
+    display: none;
+}
+
+.nav-open ul {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sidenav {
+        width: 100%;
+        text-align: left;
+    }
+
+    .sidenav a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        text-align: right;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .nav-open ul {
+        display: block;
+    }
+}
