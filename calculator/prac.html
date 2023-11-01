@@ -7,20 +7,29 @@
     
 </head>
 <body>
-    <nav>
-        <p class="para" id="pee">Hello</p>
-        <p class="para">world</p>
-        <p class="para">of</p>
-        <p class="para">python</p>
+    <nav class="nav" id = "first"style="color: rebeccapurple;">
+        <p >Hello</p>
+        <p >world</p>
+        <p >of</p>
+        <p >python</p>
     </nav>
     <script>
-        const navColor = document.getElementsByTagName("nav")
-        navColor[0].firstElementChild.style.color = "green";
-        navColor[0].lastElementChild.style.color='green';
+        console.log(first.getAttribute("class"))
+        console.log(first.hasAttribute("style"))
+        console.log(first.setAttribute("style","display:flex"));
         Array.from(document.getElementsByTagName("p")).forEach((element)=>{
-            element.style.background = "gray"
+            element.style.color = "gray";
+            element.style.margin = "10px";
         });
-        console.log(document.getElementById("pee").innerHTML)
+        function powerfunc(number,power){
+            if(power==1){
+                return number;
+            }
+            else{
+                return number * powerfunc(number,power-1);
+            }
+        }
+        console.log(powerfunc(2,20));
     </script>
     <script src="./prac.js"></script>
 </body>

@@ -8,5 +8,6 @@ document.getElementById("all-clear",addEventListener("click",()=>{
     empty(input);
 }));
 document.querySelectorAll(".number",addEventListener("click",()=>{
-    console.log()
+    
 }));
+
